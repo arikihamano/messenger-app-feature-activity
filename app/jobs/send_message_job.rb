@@ -20,7 +20,5 @@ class SendMessageJob < ApplicationJob
         cable_ready.broadcast
       end
     end
-
-
   end
 end

@@ -4,7 +4,7 @@ class Room < ApplicationRecord
 
   serialize :current_user_ids, Array
 
-  def current_user
+  def current_users
     User.where(id: current_user_ids)
   end
 end
