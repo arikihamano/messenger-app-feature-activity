@@ -15,7 +15,6 @@ class SendMessageJob < ApplicationJob
         stream = "room_#{message.room_id}_user_#{user.id}"
         cable_ready[stream].insert_adjacent_html(
           selector: '#messages',
-          position: 'beforeend',
           html: html
         )
         cable_ready.broadcast
